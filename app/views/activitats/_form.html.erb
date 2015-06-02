@@ -8,14 +8,16 @@
 
     <p>
       <strong>Utilitza aquest enllaç per obtenir les coordinades del mapa.<br></strong>
-      <strong>Al fer click al mapa et dona la latitut i longitut q has d'introduir a baix.</strong>
+      <strong>Al fer click al mapa et dona la latitud i longitud q has d'introduir a baix.</strong>
       <%= link_to 'Mapa', 'http://itouchmap.com/latlong.html', :target => "_blank" %>
     </p>
 
     <%= f.input :puesto, placeholder: 'La Rapita'%>
     <%= f.input :lat, placeholder: '40.621066' %>
     <%= f.input :long, placeholder: '0.598114' %>
-    <%= f.association :user %>
+
+    <%= f.association :user, :selected => current_user.id%>
+
 
     <div class="field">
       <%= f.label :cover, 'Cover, maxim 4Mb' %>
