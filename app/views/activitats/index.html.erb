@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Llista d'Activitats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titol</th>
+      <th>Subtitol</th>
+      <th>Descripcio</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th>User</th>
+      <th>Cover</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activitats.each do |activitat| %>
+      <tr>
+        <td><%= activitat.titol %></td>
+        <td><%= activitat.subtitol %></td>
+        <td><%= activitat.descripcio %></td>
+        <td><%= activitat.lat %></td>
+        <td><%= activitat.long %></td>
+        <td><%= activitat.user.name %></td>
+        <td><%= image_tag activitat.cover.url(:medium) %></td>
+        <td><%= link_to 'Mostra', activitat %></td>
+        <td><%= link_to 'Edita', edit_activitat_path(activitat) %></td>
+        <td><%= link_to 'Destrueix', activitat, method: :delete, data: { confirm: 'Estas segur?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Activitat', new_activitat_path %>

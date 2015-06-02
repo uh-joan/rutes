@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titol:</strong>
+  <%= @activitat.titol %>
+</p>
+
+<p>
+  <strong>Subtitol:</strong>
+  <%= @activitat.subtitol %>
+</p>
+
+<p>
+  <strong>Descripcio:</strong>
+  <%= @activitat.descripcio %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @activitat.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @activitat.long %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @activitat.user.name %>
+</p>
+<p>
+  <strong>Cover:</strong>
+  <%= image_tag @activitat.cover.url(:medium) %>
+</p>
+
+
+<%= link_to 'Edita', edit_activitat_path(@activitat) %> |
+<%= link_to 'Enrera', activitats_path %>
