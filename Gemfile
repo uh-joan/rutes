@@ -29,3 +29,4 @@ end
 
 gem 'paperclip', '4.2.1'
 gem 'aws-sdk', '< 2.0'
+gem 'rack-cors', '0.4.0'

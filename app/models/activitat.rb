@@ -8,7 +8,8 @@ class Activitat < ActiveRecord::Base
                         medium: '300x300>',
                         cover: '640x480>'
                     },
-                    :s3_host_name => 's3-eu-west-1.amazonaws.com'
+                    :s3_host_name => 's3-eu-west-1.amazonaws.com',
+                    :s3_credentials => "#{Rails.root}/config/application.yml"
 
 
   validates_attachment :cover, :presence => true
