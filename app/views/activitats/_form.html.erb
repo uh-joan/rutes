@@ -2,9 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :titol %>
-    <%= f.input :subtitol %>
-    <%= f.input :descripcio %>
+    <%= f.input :titol, placeholder: 'Museu del Mar' %>
+    <%= f.input :subtitol, placeholder: 'Bressol dels pescadors i mariners' %>
+    <%= f.input :descripcio, placeholder: '[...] la orada, lo mujol, l\'anguila, la palaia... '  %>
 
     <p>
       <strong>Utilitza aquest enllaç per obtenir les coordinades del mapa.<br></strong>
@@ -12,12 +12,13 @@
       <%= link_to 'Mapa', 'http://itouchmap.com/latlong.html', :target => "_blank" %>
     </p>
 
-    <%= f.input :lat %>
-    <%= f.input :long %>
+    <%= f.input :puesto, placeholder: 'La Rapita'%>
+    <%= f.input :lat, placeholder: '40.621066' %>
+    <%= f.input :long, placeholder: '0.598114' %>
     <%= f.association :user %>
 
     <div class="field">
-      <%= f.label :cover, 'Cover, Maxim 10Mb' %>
+      <%= f.label :cover, 'Cover, maxim 4Mb' %>
       <%= f.file_field :cover %>
     </div>
 

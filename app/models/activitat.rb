@@ -16,7 +16,7 @@ class Activitat < ActiveRecord::Base
   validates_attachment :cover, :presence => true
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
   validates_attachment_file_name :cover, :matches => [/png\Z/, /jpe?g\Z/]
-  validates_attachment_size :cover,  :less_than => 10.megabytes
+  validates_attachment_size :cover,  :less_than => 4.megabytes
 
 
   def full_path
