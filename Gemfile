@@ -43,3 +43,23 @@ group :development, :test do
   gem 'spring'
 end
 
+
+gem 'devise'
+gem 'figaro', '>= 1.0.0.rc1'
+gem 'foundation-rails'
+gem 'pg'
+gem 'simple_form'
+gem 'unicorn'
+gem 'unicorn-rails'
+gem 'upmin-admin'
+
+group :development do
+  gem 'hub', :require=>nil
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
+
