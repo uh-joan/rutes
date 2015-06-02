@@ -25,7 +25,7 @@
         <td><%= activitat.lat %></td>
         <td><%= activitat.long %></td>
         <td><%= activitat.user.name %></td>
-        <td><%= image_tag activitat.cover.url(:medium) %></td>
+        <td><%= image_tag activitat.cover.url(:thumb) %></td>
         <td><%= link_to 'Mostra', activitat %></td>
         <td><%= link_to 'Edita', edit_activitat_path(activitat) %></td>
         <td><%= link_to 'Destrueix', activitat, method: :delete, data: { confirm: 'Estas segur?' } %></td>
