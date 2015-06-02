@@ -5,12 +5,19 @@
     <%= f.input :titol %>
     <%= f.input :subtitol %>
     <%= f.input :descripcio %>
+
+    <p>
+      <strong>Utilitza aquest enllaç per obtenir les coordinades del mapa.<br></strong>
+      <strong>Al fer click al mapa et dona la latitut i longitut q has d'introduir a baix.</strong>
+      <%= link_to 'Mapa', 'http://itouchmap.com/latlong.html', :target => "_blank" %>
+    </p>
+
     <%= f.input :lat %>
     <%= f.input :long %>
     <%= f.association :user %>
 
     <div class="field">
-      <%= f.label :cover %>
+      <%= f.label :cover, 'Cover, Maxim 10Mb' %>
       <%= f.file_field :cover %>
     </div>
 
