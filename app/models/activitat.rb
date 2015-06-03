@@ -8,9 +8,8 @@ class Activitat < ActiveRecord::Base
                         thumb: '100x100>',
                         square: '200x200>',
                         medium: '300x300>',
-                        cover: '480x1080>',
-                        fullscreen: '1080x1920>',
-
+                        cover: '180x414>',
+                        fullscreen: '736x414>'
                     },
                     :s3_host_name => 's3-eu-west-1.amazonaws.com'
   # ,
@@ -38,7 +37,7 @@ class Activitat < ActiveRecord::Base
   ActiveRecord::Base.include_root_in_json = false
 
   def as_json(options={})
-    super(:methods => [:cover_path, :fullscreen, :distance])
+    super(:methods => [:cover_path, :fullscreen_path, :distance])
   end
 
 end
