@@ -32,7 +32,7 @@ class Activitat < ActiveRecord::Base
   end
 
   def iphone6p_path
-    "#{cover.url(:iphone6p_path)}"
+    "#{cover.url(:iphone6p)}"
   end
 
   def distance
