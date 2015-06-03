@@ -49,7 +49,7 @@ module Api
         activitats = Activitat.all
         closest_ruta = nil
         activitat_origin = Activitat.new({lat: params[:lat], long: params[:long]})
-        min_dist = 9999
+        min_dist = 9999999999
 
         #
         activitats.each do |act|
