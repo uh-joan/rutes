@@ -8,8 +8,9 @@ class Activitat < ActiveRecord::Base
                         thumb: '100x100>',
                         square: '200x200>',
                         medium: '300x300>',
-                        cover: '640x480>',
-                        iphone6p: '1080x1920>'
+                        cover: '480x1080>',
+                        fullscreen: '1080x1920>',
+
                     },
                     :s3_host_name => 's3-eu-west-1.amazonaws.com'
   # ,
