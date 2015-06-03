@@ -27,6 +27,10 @@ class Activitat < ActiveRecord::Base
     "#{cover.url(:cover)}"
   end
 
+  def fullscreen_path
+    "#{cover.url(:fullscreen)}"
+  end
+
   def distance
     "#{dist}"
   end
@@ -34,7 +38,7 @@ class Activitat < ActiveRecord::Base
   ActiveRecord::Base.include_root_in_json = false
 
   def as_json(options={})
-    super(:methods => [:cover_path, :distance])
+    super(:methods => [:cover_path, :fullscreen, :distance])
   end
 
 end
