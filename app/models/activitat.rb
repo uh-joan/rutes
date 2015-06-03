@@ -8,7 +8,7 @@ class Activitat < ActiveRecord::Base
                         thumb: '100x100>',
                         square: '200x200>',
                         medium: '300x300>',
-                        cover: '180x414>',
+                        cover: '180x414>', #is gone to 180x320
                         fullscreen: '736x414>',
                         iphone6p: '1920x1080>'
                     },
@@ -31,6 +31,10 @@ class Activitat < ActiveRecord::Base
     "#{cover.url(:fullscreen)}"
   end
 
+  def iphone6p_path
+    "#{cover.url(:iphone6p_path)}"
+  end
+
   def distance
     "#{dist}"
   end
@@ -38,7 +42,7 @@ class Activitat < ActiveRecord::Base
   ActiveRecord::Base.include_root_in_json = false
 
   def as_json(options={})
-    super(:methods => [:cover_path, :fullscreen_path, :distance])
+    super(:methods => [:cover_path, :fullscreen_path, :iphone6p_path, :distance])
   end
 
 end
