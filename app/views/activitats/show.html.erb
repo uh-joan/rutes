@@ -41,6 +41,10 @@
   <strong>Cover:</strong>
   <%= image_tag @activitat.cover.url(:fullscreen) %>
 </p>
+<p>
+  <strong>Cover petit:</strong>
+  <%= image_tag @activitat.small_cover.url(:cover) %>
+</p>
 
 
 <%= link_to 'Edita', edit_activitat_path(@activitat) %> |

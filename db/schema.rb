@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602174059) do
+ActiveRecord::Schema.define(version: 20150604075233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,13 +23,17 @@ ActiveRecord::Schema.define(version: 20150602174059) do
     t.float    "lat"
     t.float    "long"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "cover_file_name"
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.string   "puesto"
+    t.string   "small_cover_file_name"
+    t.string   "small_cover_content_type"
+    t.integer  "small_cover_file_size"
+    t.datetime "small_cover_updated_at"
   end
 
   add_index "activitats", ["user_id"], name: "index_activitats_on_user_id", using: :btree

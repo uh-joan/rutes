@@ -127,7 +127,7 @@ module Api
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def activitat_params
-        params.require(:activitat).permit(:titol, :subtitol, :descripcio, :lat, :long, :user_id, :cover, :puesto)
+        params.require(:activitat).permit(:titol, :subtitol, :descripcio, :lat, :long, :user_id, :cover, :small_cover, :puesto)
       end
 
     end
